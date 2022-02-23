@@ -56,7 +56,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  width: 600px;
+  width: 500px;
   min-height: 300px;
   height: max-content;
   border-radius: var(--border-radius-primary);
@@ -64,6 +64,10 @@ body {
   box-shadow: 12px 12px 6px 3px rgba(27, 58, 158, 0.2);
   position: relative;
   font-size: 1.2rem;
+  background-image: url('/images/sellCategoryImage.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 
 .select {
