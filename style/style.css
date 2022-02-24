@@ -1,12 +1,11 @@
 :root {
   --border-radius-primary: 20px;
-  --border-radius-secondary: 10px;
+  --border-radius-secondary: 15px;
+  --border-radius-tertiary: 10px;
   --primary-bg-color: #6082ca;
-  --secondary-bg-color: rgb(27, 58, 158);
+  --secondary-bg-color: #393939;
   --primary-text-color: rgb(255, 255, 255);
-  --select-border: #393939;
-  --select-focus: #101484;
-  --select-arrow: var(--select-border);
+  --secondary-text-color: #000;
 }
 
 * {
@@ -17,10 +16,10 @@
 
 body {
   font-family: 'Raleway', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   background-color: var(--primary-bg-color);
   height: 100vh;
-  color: var(--primary-text-color);
+  color: var(--secondary-text-color);
 }
 
 .container {
@@ -39,6 +38,7 @@ body {
 }
 
 .qoute {
+  position: relative;
   font-family: 'Cookie', cursive;
 }
 
@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 1.2rem;
   width: 500px;
   min-height: 300px;
   height: max-content;
@@ -63,36 +63,48 @@ body {
   border: 3px #ffffff solid;
   box-shadow: 12px 12px 6px 3px rgba(27, 58, 158, 0.2);
   position: relative;
-  font-size: 1.2rem;
+}
+
+.qoute__container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
   background-image: url('/images/sellCategoryImage.jpg');
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 15px;
 }
 
 .select {
-  font-size: 1.2rem;
   color: var(--primary-text-color);
+  font-size: 1rem;
   background-color: var(--secondary-bg-color);
-  padding: 0.5rem 0.7rem;
-  width: fit-content;
+  padding: 0.5rem;
+  width: 120px;
+  height: 40px;
   outline: none;
   border: 3px #ffffff solid;
-  border-radius: var(--border-radius-secondary);
+  border-radius: var(--border-radius-tertiary);
   position: absolute;
-  top: -25px;
+  top: -22px;
 }
 
 .button {
-  padding: 0.5rem 0.7rem;
+  padding: 0.5rem;
   border: 3px #ffffff solid;
-  border-radius: var(--border-radius-secondary);
+  border-radius: var(--border-radius-tertiary);
   cursor: pointer;
-  width: 150px;
+  width: 120px;
+  height: 40px;
   position: absolute;
-  bottom: -25px;
+  bottom: -22px;
   color: var(--primary-text-color);
-  font-size: 1.2rem;
+  font-size: 1rem;
   background-color: var(--secondary-bg-color);
 }
 
@@ -115,7 +127,7 @@ body {
 .button__loader:before,
 .button__loader:after {
   content: '';
-  width: inherit;
+  width: 1rem;
   height: inherit;
   border-radius: 50%;
   background-color: #14213d;
