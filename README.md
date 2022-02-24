@@ -10,14 +10,14 @@
     background: #BDFFF3;
     border-radius:10px;
     font-size:0.85rem;
-    font-weight:600;">Official API</a> |
+    font-weight:600;">Official API</a> <br/> 
 <a href="#" target="_blank" rel="noopener noreferrer"
     style="padding:0.35rem 0.7rem;
     color: black;
     background: #F1DEDE;
     border-radius:10px;
     font-size:0.85rem;
-    font-weight:600;">Deployed app</a> |
+    font-weight:600;">Deployed app</a> <br/> 
 <a href="#" target="_blank" rel="noopener noreferrer"
     style="padding:0.35rem 0.7rem;
     color: black;
@@ -29,7 +29,7 @@
 
 ---
 
-## Description
+## About app
 
 <p>The Qoute of the they is small web app done by me in order to better understand API usage. It is fairly simple page influended mostly by this. Because of the restriction of official API,  number of request is just 10 per hour.</p>
 
@@ -37,6 +37,6 @@
 
 <p>Working app is deployed on netlify and  there is also a link for video presentation</p>
 
-## Preview
+## Screenshot
 
 <img src="/preview.png" height="600" style="border-radius:20px;margin-bottom:2rem;" />
