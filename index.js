@@ -1,4 +1,4 @@
-const baseUrl = 'https://quotes.rest/qod.json?catedddgory=';
+const baseUrl = 'https://quotes.rest/qod.json?category=';
 const domElements = new DomElements();
 
 let selectedCategory = 'inspire';
@@ -8,14 +8,16 @@ function getQoute(category) {
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
-    if (xhttp.readyState === 4) {
-      if (xhttp.status === 200) {
-        prepareData(this.response.contents.quotes[0]);
-      } else {
-        domElements.showError('There was an error');
-      }
+    if (xhttp.readyState === 4 && xhttp.status === 200) {
+      prepareData(this.response.contents.quotes[0]);
+      console.log(this.response);
+    } else if ((xhttp, this.status === 429)) {
+      domElements.showError(this.response.error.message);
+    } else {
+      domElements.showError('There was an error');
     }
   };
+
   xhttp.open('GET', apiEndPoint, true);
   xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8');
   xhttp.responseType = 'json';
@@ -30,8 +32,8 @@ function prepareData(data) {
 
 function displayResults(author, background, title, quote) {
   domElements.title.innerHTML = title;
-  domElements.quote.innerHTML = quote;
-  domElements.author.innerHTML = author;
+  domElements.quote.innerHTML = `"${quote}"`;
+  domElements.author.innerHTML = `-${author}`;
   domElements.quoteContainer.style.backgroundImage = `url(${background})`;
 }
 

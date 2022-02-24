@@ -30,6 +30,7 @@ class DomElements {
     setTimeout(() => {
       this.error.style.display = 'none';
       this.error.innerHTML = '';
-    }, 5000);
+      this.setDisabledState(false);
+    }, 3000);
   }
 }

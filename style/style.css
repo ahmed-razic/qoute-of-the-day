@@ -1,11 +1,12 @@
 :root {
+  --primary-color: #ffffff;
+  --secondary-color: #f13232;
+  --bg-color-primary: #6082ca;
+  --bg-color-secondary: #393939;
+  --bg-color-tertiary: #f13232;
   --border-radius-primary: 20px;
   --border-radius-secondary: 15px;
   --border-radius-tertiary: 10px;
-  --primary-bg-color: #6082ca;
-  --secondary-bg-color: #393939;
-  --primary-text-color: rgb(255, 255, 255);
-  --secondary-text-color: #ffffff;
 }
 
 * {
@@ -17,15 +18,15 @@
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 12px;
-  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+  background-color: var(--bg-color-primary);
   height: 100vh;
-  color: var(--secondary-text-color);
 }
 
 .container {
   padding: 0 2rem;
   height: 90%;
-  width: 50%;
+  width: 40%;
   min-width: 500px;
   display: flex;
   flex-direction: column;
@@ -42,23 +43,22 @@ body {
 }
 
 .quote {
-  position: relative;
   font-family: 'Cookie', cursive;
 }
 
 .quote__title {
-  position: relative;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.5rem;
   margin-top: 1rem;
 }
 .quote__quote {
-  position: relative;
   font-size: 2.5rem;
   margin: 2rem 0;
 }
 
 .quote__author {
-  position: relative;
+  font-style: italic;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
 }
 
@@ -72,21 +72,21 @@ body {
   height: max-content;
   border-radius: var(--border-radius-primary);
   border: 3px #ffffff solid;
-  box-shadow: 12px 12px 6px 3px rgba(27, 58, 158, 0.2);
+  box-shadow: 12px 12px 6px 3px #3939394d;
   position: relative;
   background-image: url('/images/quote.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 15px;
+  border-radius: var(--border-radius-secondary);
 }
 
 .select {
-  color: var(--primary-text-color);
+  color: var(--primary-color);
   font-size: 1rem;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--bg-color-secondary);
   padding: 0.5rem;
-  width: 150px;
+  width: 140px;
   height: 40px;
   outline: none;
   border: 3px #ffffff solid;
@@ -104,9 +104,9 @@ body {
   height: 40px;
   position: absolute;
   bottom: -22px;
-  color: var(--primary-text-color);
+  color: var(--primary-color);
   font-size: 1rem;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--bg-color-secondary);
 }
 
 .button:active {
@@ -117,15 +117,20 @@ body {
   display: none;
   margin: 0 auto;
   font-size: 1rem;
-  color: var(--primary-text-color);
+  color: var(--primary-color);
   border-radius: var(--border-radius-primary);
-  width: max-content;
+  width: 100%;
   padding: 0.5rem 2rem;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--bg-color-tertiary);
   position: absolute;
-  bottom: -5rem;
+  bottom: -10rem;
   border: 3px #ffffff solid;
-  border-radius: var(--border-radius-tertiary);
+}
+
+.attribution {
+  position: absolute;
+  bottom: -3rem;
+  right: 0;
 }
 
 .button__loader {
@@ -142,7 +147,7 @@ body {
   width: 1rem;
   height: inherit;
   border-radius: 50%;
-  background-color: #d60d0d;
+  background-color: var(--secondary-color);
   opacity: 0.6;
   position: absolute;
   top: 0;
