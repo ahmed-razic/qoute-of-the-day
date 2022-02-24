@@ -1,14 +1,13 @@
 class DomElements {
   constructor() {
-    const category = document.querySelector('#category');
-    const title = document.querySelector('#title');
-    const qoute = document.querySelector('#qoute');
-    const author = document.querySelector('#author');
-    const button = document.querySelector('#button');
-    const errorContainer = document.querySelector('#error-container');
-    const errorMessage = document.querySelector('#error-message');
-    const loader = document.querySelector('#button-loader');
+    this.quote_container = document.querySelector('#quote-container');
+    this.category = document.querySelector('#category');
+    this.title = document.querySelector('#title');
+    this.quote = document.querySelector('#quote');
+    this.author = document.querySelector('#author');
+    this.button = document.querySelector('#button');
+    this.errorContainer = document.querySelector('#error-container');
+    this.errorMessage = document.querySelector('#error-message');
+    this.loader = document.querySelector('#button-loader');
   }
-
-  //Methods
 }

@@ -37,21 +37,36 @@ body {
   margin-bottom: 5rem;
 }
 
-.qoute {
+.quote {
   position: relative;
   font-family: 'Cookie', cursive;
 }
 
-.qoute__title {
+.quote__title {
+  position: relative;
   font-size: 2rem;
   margin-top: 1rem;
 }
-.qoute__qoute {
+.quote__quote {
+  position: relative;
   font-size: 3rem;
   margin-top: 1rem;
 }
 
-.qoute__container {
+.quote__author {
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.qoute__image {
+  background-image: url('/images/quote.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.quote__container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +80,7 @@ body {
   position: relative;
 }
 
-.qoute__container::before {
+.quote__container::before {
   content: '';
   position: absolute;
   left: 0;
@@ -73,11 +88,6 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  background-image: url('/images/sellCategoryImage.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 15px;
 }
 
 .select {

@@ -11,15 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Raleway&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="./style/style.css" />
-    <title>Qoute of the day</title>
+    <title>Quote of the day</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1 class="header">The Qoute of the day</h1>
+        <h1 class="header">The Quote of the day</h1>
       </header>
 
-      <div class="qoute__container">
+      <div id="quote-container" class="quote__container">
         <select name="category" id="category" class="select">
           <option value="inspire">Inspire</option>
           <option value="management">Management</option>
@@ -30,14 +30,15 @@
           <option value="art">Art</option>
           <option value="students">Students</option>
         </select>
-        <div class="qoute">
-          <p id="title" class="qoute__title">Category title</p>
-          <p id="qoute" class="qoute__qoute">Be strong or be wrong</p>
-          <p id="author">Myself</p>
+        <div class="quote">
+          <img src="./images/quote.jpg" alt="category" class="qoute__image" />
+          <p id="title" class="quote__title"></p>
+          <p id="quote" class="quote__quote"></p>
+          <p id="author" class="quote__author"></p>
         </div>
         <button id="button" type="button" class="button">
           <span id="button-loader" class="button__loader"></span>
-          <span id="button-ready" class="button__ready">Get a Qoute</span>
+          <span id="button-ready" class="button__ready">Get a Quote</span>
         </button>
       </div>
       <div id="error-container" class="error__container">
@@ -46,6 +47,8 @@
       </div>
     </div>
   </body>
+  <script src="./classes/RequestQuote.js"></script>
+  <script src="./classes/PrepareForDom.js"></script>
   <script src="./classes/DomElements.js"></script>
   <script src="index.js"></script>
 </html>
