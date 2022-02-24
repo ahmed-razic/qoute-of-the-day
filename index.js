@@ -1,4 +1,4 @@
-const baseUrl = 'https://quotes.rest/qod.json?category=';
+const baseUrl = 'https://quotes.rest/qod.json?catedddgory=';
 const domElements = new DomElements();
 
 let selectedCategory = 'inspire';

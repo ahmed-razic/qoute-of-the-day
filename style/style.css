@@ -116,7 +116,6 @@ body {
 .error {
   display: none;
   margin: 0 auto;
-  display: none;
   font-size: 1rem;
   color: var(--primary-text-color);
   border-radius: var(--border-radius-primary);
@@ -128,6 +127,7 @@ body {
   border: 3px #ffffff solid;
   border-radius: var(--border-radius-tertiary);
 }
+
 .button__loader {
   display: none;
   position: relative;
@@ -142,7 +142,7 @@ body {
   width: 1rem;
   height: inherit;
   border-radius: 50%;
-  background-color: #14213d;
+  background-color: #d60d0d;
   opacity: 0.6;
   position: absolute;
   top: 0;
