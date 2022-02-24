@@ -21,7 +21,7 @@
 
       <div id="quote-container" class="quote__container">
         <select name="category" id="category" class="select">
-          <option value="inspire">Inspire</option>
+          <option value="inspire" selected>Inspire</option>
           <option value="management">Management</option>
           <option value="sports">Sports</option>
           <option value="life">Life</option>
@@ -31,24 +31,20 @@
           <option value="students">Students</option>
         </select>
         <div class="quote">
-          <img src="./images/quote.jpg" alt="category" class="qoute__image" />
-          <p id="title" class="quote__title"></p>
-          <p id="quote" class="quote__quote"></p>
-          <p id="author" class="quote__author"></p>
+          <p id="title" class="quote__title">Inspiring Quote of the day</p>
+          <p id="quote" class="quote__quote">
+            People who are crazy enough to think they can change the world, are the ones who do.
+          </p>
+          <p id="author" class="quote__author">Apple Computers</p>
         </div>
         <button id="button" type="button" class="button">
           <span id="button-loader" class="button__loader"></span>
           <span id="button-ready" class="button__ready">Get a Quote</span>
         </button>
-      </div>
-      <div id="error-container" class="error__container">
-        <p>There was an error:</p>
-        <span id="error-message" class="error__message">error</span>
+        <div id="error" class="error"></div>
       </div>
     </div>
   </body>
-  <script src="./classes/RequestQuote.js"></script>
-  <script src="./classes/PrepareForDom.js"></script>
   <script src="./classes/DomElements.js"></script>
   <script src="index.js"></script>
 </html>

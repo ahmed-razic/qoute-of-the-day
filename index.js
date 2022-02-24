@@ -1,22 +1,19 @@
 const baseUrl = 'https://quotes.rest/qod.json?category=';
 const domElements = new DomElements();
 
-let selectedCategory = 'love';
-domElements.category.addEventListener('change', e => setCategory(e));
-function setCategory(e) {
-  selectedCategory = e.target.value;
-  console.log(selectedCategory);
-}
+let selectedCategory = 'inspire';
 
 function getQoute(category) {
   const apiEndPoint = baseUrl + category;
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      // Access the result here
-      prepareData(this.response.contents.quotes[0]);
-      console.log(this.response.contents.quotes[0]);
+    if (xhttp.readyState === 4) {
+      if (xhttp.status === 200) {
+        prepareData(this.response.contents.quotes[0]);
+      } else {
+        domElements.showError('There was an error');
+      }
     }
   };
   xhttp.open('GET', apiEndPoint, true);
@@ -26,6 +23,7 @@ function getQoute(category) {
 }
 
 function prepareData(data) {
+  domElements.setDisabledState(false);
   const { author, background, title, quote } = data;
   displayResults(author, background, title, quote);
 }
@@ -34,7 +32,16 @@ function displayResults(author, background, title, quote) {
   domElements.title.innerHTML = title;
   domElements.quote.innerHTML = quote;
   domElements.author.innerHTML = author;
-  domElements.quote_container.getElementsByClassName('quote__container::before').background-image = background;
+  domElements.quoteContainer.style.backgroundImage = `url(${background})`;
 }
 
-domElements.button.addEventListener('click', () => getQoute(selectedCategory));
+domElements.category.addEventListener('change', e => setCategory(e));
+
+function setCategory(e) {
+  selectedCategory = e.target.value;
+}
+
+domElements.button.addEventListener('click', () => {
+  domElements.setDisabledState(true);
+  getQoute(selectedCategory);
+});
