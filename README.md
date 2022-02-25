@@ -5,7 +5,7 @@
 <div>
 <a href="https://theysaidso.com/api/" target="_blank" rel="noopener noreferrer"
     style="padding:0.5rem 0.7rem;
-    color: black;
+    color: green;
     background: #BDFFF3;
     border-radius:10px;
     font-size:0.85rem;
@@ -28,7 +28,7 @@
 
 ---
 
-## About app
+## About
 
 <p>The Quote of the they is small web app done by me in order to better understand API usage. It is fairly simple page influenced mostly by <a href="https://theultimateapichallenge.com/" target="_blank" rel="noopener noreferrer">Ultimate API Challenge</a>. Because of the restriction of the official API, a number of requests is just 10 per hour.</p>
 
