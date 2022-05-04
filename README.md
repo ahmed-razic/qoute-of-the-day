@@ -10,7 +10,7 @@
     border-radius:10px;
     font-size:0.85rem;
     font-weight:600;">Official API documentation</a> <br/> 
-<a href="#" target="_blank" rel="noopener noreferrer"
+<a href="https://quote-of-the-day-flax.vercel.app/" target="_blank" rel="noopener noreferrer"
     style="padding:0.5rem 0.7rem;
     color: black;
     background: #F1DEDE;
